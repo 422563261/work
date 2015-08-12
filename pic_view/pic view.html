@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>pic view</title>
+</head>
+<body>
+	<div id="pic" class="pic" style="display: inline-block;position: relative;left:0px; top:0px;">
+		<img src="pic/s.jpg" alt="s" id="img" class="img">
+	</div>
+	<div id="change" style="position: fixed;bottom: 0px;">
+		<div>
+			<img src="pic/up.png" alt="up" id="up">
+			<img src="pic/big.png" alt="big" id="big">
+		</div>
+		<div>
+			<img src="pic/left.png" alt="left" id="left">
+			<img src="pic/right.png" alt="right" id="right">
+		</div>
+		<div>
+			<img src="pic/down.png" alt="down" id="down">
+			<img src="pic/small.png" alt="small" id="small">
+		</div>
+
+
+	</div>
+</body>
+<script>
+	var D = function(obj){return document.getElementById(obj);};//获取元素
+	var drag = false;//禁止拖动
+
+	function Move(e){//上下左右移动
+		if (e == "up") {D("pic").style.top = parseInt(D("pic").style.top) - 100 + "px";};//上100px
+		if (e == "down") {D("pic").style.top = parseInt(D("pic").style.top) + 100 + "px";};//下100px
+		if (e == "left") {D("pic").style.left = parseInt(D("pic").style.left) - 100 + "px";};//左100px
+		if (e == "right") {D("pic").style.left = parseInt(D("pic").style.left) + 100 + "px";};//右100px
+	}
+
+	function ChangeSize(e){//大小改变
+		height = D("img").height;
+		width = D("img").width;
+		if (e == "small") {D("img").height = height/1.1;D("img").width = height/1.1};//放大为1.21倍
+		if (e == "big") {D("img").height = height*1.1;D("img").width = height*1.1};//缩小1.21倍
+	}
+
+	function Move_(e){//拖动图片
+		var obj = e.target;
+		while (obj.className != "pic") { 
+		obj = obj.parentNode;
+		} 
+		if (obj.className == "pic" ) {
+			  drag = true;//允许拖动
+			  obj.style.position = "absolute";
+			  var position1 = obj.offsetLeft;//触发事件时父对象的左边距
+			  var position2 = obj.offsetTop;//触发事件时父对象的上边距
+			  var x = event.clientX;//触发事件时鼠标x坐标
+			  var y = event.clientY;//触发事件时鼠标y坐标
+		   	  document.onmousemove = function(e){
+				  if(!drag)return false;
+				  obj.style.left = position1 + event.clientX - x + "px";//左边距与鼠标x坐标和
+				  obj.style.top = position2 + event.clientY - y + "px";//上边距与鼠标y坐标和
+				  return false;
+			  }	 
+			  return false;
+		 }
+	}
+	D("img").onmousedown = Move_;
+	D("img").onmouseup = function(){drag = false;};
+
+	//添加事件
+	D("up").addEventListener('click',function(){Move("up");});
+	D("down").addEventListener('click',function(){Move("down");});
+	D("left").addEventListener('click',function(){Move("left");});
+	D("right").addEventListener('click',function(){Move("right");});
+	D("small").addEventListener('click',function(){ChangeSize("small");});
+	D("big").addEventListener('click',function(){ChangeSize("big");});
+</script>
+</html>
