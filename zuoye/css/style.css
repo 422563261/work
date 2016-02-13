@@ -1,0 +1,309 @@
+html {
+  font-size: 62.5%;
+}
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 55.5%;
+  }
+}
+body {
+  font-family: Arial, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+.hide {
+  position: fixed;
+  top: 0;
+  width: 0;
+  height: 100%;
+  z-index: 2;
+  background: #333333;
+  opacity: 0.7;
+}
+.hide_list {
+  position: fixed;
+  height: 100%;
+  width: 50%;
+  right: 0;
+  left: 100%;
+  z-index: 3;
+  background: #fff;
+  overflow-x: scroll;
+}
+.hide_list .tool {
+  width: 100%;
+  height: 3.63rem;
+  line-height: 3.63rem;
+}
+.hide_list .tool div {
+  font-size: 1.5rem;
+  float: right;
+}
+.hide_list .tool .sure {
+  color: #b8e79f;
+  margin-right: 1rem;
+}
+.hide_list .tool .cancel {
+  margin-right: 1.5rem;
+}
+.hide_list .choose {
+  width: 100%;
+  height: 3.63rem;
+  line-height: 3.63rem;
+  border-bottom: 1px solid #cccccc;
+  box-sizing: border-box;
+}
+.hide_list .choose .words {
+  float: left;
+  font-size: 1.7rem;
+  margin-left: 0.8rem;
+}
+.hide_list .choose .type,
+.hide_list .choose .way,
+.hide_list .choose .sexy,
+.hide_list .choose .pay,
+.hide_list .choose .time {
+  float: right;
+  margin-right: 1rem;
+  margin-top: 1.42rem;
+  width: 1.3rem;
+  height: 0.78rem;
+}
+.hide_list .choose_boss {
+  display: none;
+}
+.hide_list .choose_box {
+  width: 100%;
+  height: 3.63rem;
+  line-height: 3.63rem;
+  border-bottom: 1px solid #cccccc;
+  background: #eeeeee;
+  box-sizing: border-box;
+}
+.hide_list .choose_box .words {
+  float: left;
+  font-size: 1.5rem;
+  margin-left: 0.8rem;
+}
+.head {
+  top: 0;
+  width: 100%;
+  background: #f3f3f3;
+  position: fixed;
+  z-index: 1;
+}
+.head .head_container {
+  width: 91%;
+  height: 4rem;
+  line-height: 4rem;
+  margin: 0 auto;
+}
+.head .head_container .yue {
+  float: left;
+  font-size: 2.5rem;
+}
+.head .head_container .list,
+.head .head_container .search,
+.head .head_container .write {
+  float: right;
+  width: 2.2rem;
+  height: 2.2rem;
+  margin-top: 0.9rem;
+  background-size: 100% 100%;
+}
+@media screen and (max-width: 320px) {
+  .head .head_container .list,
+  .head .head_container .search,
+  .head .head_container .write {
+    width: 2rem;
+    height: 2rem;
+    margin-top: 1rem;
+  }
+}
+.head .head_container .search,
+.head .head_container .write {
+  margin-right: 2.1rem;
+}
+.head .head_container .list {
+  background-image: url('../img/list.png');
+}
+.head .head_container .search {
+  background-image: url('../img/search.png');
+}
+.head .head_container .write {
+  background-image: url('../img/write.png');
+}
+.nav {
+  width: 100%;
+  background: #333333;
+  margin-top: 4rem;
+}
+.nav .nav_container {
+  width: 91%;
+  height: 4.8rem;
+  line-height: 4.8rem;
+  margin: 0 auto;
+}
+@media screen and (max-width: 320px) {
+  .nav .nav_container {
+    height: 4rem;
+    line-height: 4rem;
+  }
+}
+.nav .nav_container .box {
+  float: left;
+  height: 4.7rem;
+  line-height: 4.7rem;
+  width: 5.87rem;
+  font-size: 2rem;
+  text-align: center;
+  color: #999999;
+  margin-left: 0.9rem;
+}
+@media screen and (min-width: 414px) {
+  .nav .nav_container .box {
+    margin-left: 1.9rem;
+  }
+}
+@media screen and (min-width: 375px) {
+  .nav .nav_container .box {
+    margin-left: 1.2rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  .nav .nav_container .box {
+    margin-left: 1rem;
+    width: 5rem;
+    height: 3.9rem;
+    line-height: 3.9rem;
+  }
+}
+.nav .nav_container .box_active {
+  color: #ffd35c;
+  border-bottom: 0.27rem solid #ffd35c;
+}
+.blank {
+  width: 100%;
+  height: 0.8rem;
+  background: #eaeaea;
+}
+.ad {
+  width: 100%;
+  height: 13.77rem;
+  overflow: hidden;
+  position: relative;
+}
+.ad .ad_container {
+  width: 400%;
+  height: 13.77rem;
+  position: absolute;
+}
+.ad .ad_container img {
+  width: 25%;
+  height: 13.77rem;
+  float: left;
+}
+.inf {
+  width: 100%;
+  height: 20rem;
+  position: relative;
+}
+.inf .inf_container {
+  width: 91%;
+  height: 17.3rem;
+  margin: 0 auto;
+}
+.inf .inf_container .inf_top {
+  height: 100%;
+  height: 7.4rem;
+  position: relative;
+  border-bottom: 1px solid #c4c4c4;
+  overflow: hidden;
+}
+.inf .inf_container .pic {
+  position: absolute;
+  width: 4.93rem;
+  height: 100%;
+}
+.inf .inf_container .pic img {
+  width: 4.93rem;
+  height: 4.93rem;
+  margin-top: 1.23rem;
+}
+.inf .inf_container .more_top {
+  margin-top: 1.3rem;
+  margin-left: 5.87rem;
+  overflow: hidden;
+}
+.inf .inf_container .more_top .name {
+  font-size: 2rem;
+}
+.inf .inf_container .more_top img {
+  width: 1.67rem;
+  height: 1.67rem;
+}
+.inf .inf_container .more_top .eat {
+  display: inline-block;
+  float: right;
+  margin-top: 0.5rem;
+  width: 3.13rem;
+  height: 1.47rem;
+  line-height: 1.47rem;
+  border: 1px solid #c4c4c4;
+  border-radius: 1.5rem;
+  background: #c4c4c4;
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+}
+.inf .inf_container .more_bottom {
+  color: #c4c4c4;
+  font-size: 1.5rem;
+  margin-left: 5.87rem;
+}
+.inf .inf_container .inf_bottom .words {
+  font-size: 2rem;
+}
+.inf .inf_container .time {
+  position: relative;
+  margin-top: 1rem;
+}
+.inf .inf_container .loc {
+  position: relative;
+  margin-top: 0.3rem;
+}
+.inf .inf_container .loc .when_time {
+  position: absolute;
+  right: 0;
+}
+.inf .inf_container .time,
+.inf .inf_container .loc {
+  font-size: 1.5rem;
+  color: #c4c4c4;
+}
+.inf .inf_container .time img,
+.inf .inf_container .loc img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.inf .inf_container .time .when,
+.inf .inf_container .loc .when {
+  position: relative;
+  top: -0.3rem;
+}
+.inf .tool {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.inf .tool .box {
+  float: left;
+  width: 33.3%;
+  text-align: center;
+  color: #c4c4c4;
+  font-size: 1.5rem;
+  border-right: 1px solid #c4c4c4;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  /* Firefox */
+  -webkit-box-sizing: border-box;
+  /* Safari */
+}

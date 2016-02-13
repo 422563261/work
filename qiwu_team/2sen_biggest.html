@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>找第二大</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var a = [1,2,3,4,5,6];
+	var b = [];
+	var k = 0;
+	for (var i = 0; i < a.length;) {
+		if (a[i]>=a[i+1]) {
+			b[k]=a[i];
+			i = i + 2;
+			k = k + 1;
+		}
+		else{
+			b[i]=a[i+1];
+			i = i + 2;
+			k = k + 1;
+		}
+	};
+	console.log(b);
+</script>
+</html>

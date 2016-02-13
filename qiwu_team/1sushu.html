@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>素数</title>
+</head>
+<body>
+	<form>
+		请输入:<input type="text" id="info" >
+	</form>
+</body>
+<script>
+	
+	info.addEventListener('blur',function() {
+		var info = document.getElementById('info').value;
+		var half = parseInt(Math.sqrt(info));
+		for (var i = 2; i <= half; i++) {
+			if (info%i==0) {
+				break;
+			};
+		};
+		if (i>half) {
+			console.log('素数');
+		}
+		else{
+			console.log('不是素数');
+		}
+	})
+</script>
+</html>

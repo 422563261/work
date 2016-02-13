@@ -1,0 +1,130 @@
+body {
+  font-family: "MicrosoftYaHei";
+}
+.head {
+  width: 1920px;
+  height: 600px;
+  background-image: url("../img/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+.head .example {
+  float: left;
+  margin-left: 351px;
+  margin-top: 58px;
+}
+.head .more-info {
+  float: left;
+  width: 494px;
+  margin-left: 91px;
+  margin-top: 105px;
+}
+.head .more-info .ban {
+  font-size: 26px;
+  line-height: 42px;
+  display: inline-block;
+  width: 110px;
+  height: 48px;
+  margin-left: 256px;
+  text-align: center;
+  color: #fff;
+  background-image: url('../img/border.png');
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+.head .more-info p {
+  font-size: 71px;
+  font-weight: bolder;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #d82a3e;
+}
+.head .more-info button {
+  line-height: 63px;
+  float: left;
+  width: 228px;
+  height: 63px;
+  margin: 0;
+  margin-top: 38px;
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+  background: #93d53d;
+}
+.head .more-info button + button {
+  float: right;
+  background: #ff5c10;
+}
+.head .more-info button img {
+  float: left;
+  margin-top: 15px;
+  margin-left: 16px;
+}
+.head .more-info button p {
+  font-size: 26px;
+  float: right;
+  margin-right: 20px;
+  color: #fff;
+}
+.head .more-info .erweima {
+  margin-top: 105px;
+}
+.container {
+  clear: both;
+  width: 1920px;
+  height: 575px;
+}
+.container ul {
+  width: 1174px;
+  margin: 0 auto;
+  padding: 0;
+}
+.container ul li {
+  font-size: 30px;
+  display: inline-block;
+  float: left;
+  width: 252px;
+  margin-top: 158px;
+  cursor: pointer;
+  text-align: center;
+}
+.container ul li:nth-child(1) {
+  margin-left: 70px;
+}
+.container ul li:nth-child(2) {
+  margin-left: 160px;
+}
+.container ul li:nth-child(3) {
+  margin-left: 160px;
+}
+.foot {
+  width: 1920px;
+  height: 138px;
+  background: #eaeaea;
+}
+.foot ul {
+  overflow: hidden;
+  width: 374px;
+  margin: 0 auto;
+  padding: 0;
+}
+.foot ul li {
+  font-size: 20px;
+  list-style: none;
+  text-align: center;
+}
+.foot ul li a {
+  text-decoration: none;
+  color: #000;
+}
+.foot ul li:nth-child(1) {
+  margin-top: 35px;
+}
+.foot ul li:nth-child(2) {
+  margin-top: 14px;
+}
+.foot ul li:nth-child(3) {
+  margin-top: 14px;
+}
